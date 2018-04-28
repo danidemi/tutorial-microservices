@@ -3,7 +3,7 @@
 From built jar:
 
 	java -jar microservices-spring-boot-rest-2.0.1.RELEASE.jar --server.port=4040
-	java -Dserver.port -jar microservices-spring-boot-rest-2.0.1.RELEASE.jar
+	java -Dserver.port=4040 -jar microservices-spring-boot-rest-2.0.1.RELEASE.jar
 	
 From built jar, with remote debug enabled:
 
