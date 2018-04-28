@@ -10,9 +10,9 @@ From built jar, with remote debug enabled:
     java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \
         -jar microservices-spring-boot-rest-2.0.1.RELEASE.jar	
 	
-From mvn:
+From mvn, it seems it is not possible to pass parameters to the forked process:
 
-    mvn spring-boot:run -Drun.jvmArguments="--server.port=4444"
+    mvn spring-boot:run
 
 	
 
