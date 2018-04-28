@@ -1,4 +1,4 @@
-package com.danidemi.tutorial.microservices.springboot.rest.json;
+package com.danidemi.tutorial.microservices.springboot.rest.controller.json;
 
 import java.util.Objects;
 
