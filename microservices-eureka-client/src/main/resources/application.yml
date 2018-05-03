@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: AppWithEurekaClient
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        core:
+          env: DEBUG
+    com:
+      netflix:
+        discovery: TRACE
+
+server:
+  port: 44444
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

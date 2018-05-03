@@ -10,6 +10,7 @@
         <module>microservices-spring-boot-rest</module>
         <module>microservices-spring-boot-rest-client</module>
         <module>microservices-eureka-service</module>
+        <module>microservices-eureka-client</module>
     </modules>
     <packaging>pom</packaging>
 </project>
