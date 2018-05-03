@@ -5,10 +5,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * By having spring-cloud-starter-netflix-eureka-client on the classpath,
@@ -25,6 +29,13 @@ public class AppWithEurekaClient {
     @RequestMapping("/")
     public String home() {
         return "Hello world";
+    }
+
+    @GetMapping("/planets")
+    public List<String> planets() {
+        return Arrays.asList(
+                "Mercury", "Venus", "Earth", "Mars", "Ceres", "Jupiter", "Saturn", "Uranus", "Neptune"
+        );
     }
 
     @PostConstruct

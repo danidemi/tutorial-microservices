@@ -1,6 +1,6 @@
 spring:
   application:
-    name: planets-service
+    name: trip-service
 
 logging:
   level:
@@ -14,7 +14,7 @@ logging:
         discovery: TRACE
 
 server:
-  port: 44444
+  port: 55555
 
 eureka:
   client:

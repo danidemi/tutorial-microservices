@@ -11,6 +11,7 @@
         <module>microservices-spring-boot-rest-client</module>
         <module>microservices-eureka-service</module>
         <module>microservices-eureka-client</module>
+        <module>microservices-eureka-discovering-service</module>
     </modules>
     <packaging>pom</packaging>
 </project>
