@@ -12,6 +12,7 @@
         <module>microservices-eureka-service</module>
         <module>microservices-eureka-client</module>
         <module>microservices-eureka-discovering-service</module>
+        <module>microservices-saga-services</module>
     </modules>
     <packaging>pom</packaging>
 </project>
