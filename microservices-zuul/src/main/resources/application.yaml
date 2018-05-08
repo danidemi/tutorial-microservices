@@ -1,0 +1,18 @@
+# Zuul routes.
+zuul:
+  ignoredServices: '*'
+  routes:
+    trips:
+      path: /trips/**
+
+      # Uses 'disovoery' instead of fixed IP.
+      serviceId: TRIP-SERVICE
+
+# Ribbon is auto integrated with Zuul and for this exercise we are not using that.
+ribbon:
+  eureka:
+    enabled: true
+
+# Port on which zuul will bind
+server:
+  port: 8080
