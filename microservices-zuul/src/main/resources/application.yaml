@@ -1,12 +1,16 @@
-# Zuul routes.
-zuul:
-  ignoredServices: '*'
-  routes:
-    trips:
-      path: /trips/**
+spring:
+  application:
+    name: zuul-service
 
-      # Uses 'disovoery' instead of fixed IP.
-      serviceId: TRIP-SERVICE
+## Zuul routes.
+#zuul:
+#  ignoredServices: '*'
+#  routes:
+#    trips:
+#      path: /trips/**
+#
+#      # Uses 'disovoery' instead of fixed IP.
+#      serviceId: TRIP-SERVICE
 
 # Ribbon is auto integrated with Zuul and for this exercise we are not using that.
 ribbon:
@@ -16,3 +20,16 @@ ribbon:
 # Port on which zuul will bind
 server:
   port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
