@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>microservices-spring-boot-rest</module>
+        <module>microservices-spring-boot-db</module>
         <module>microservices-spring-boot-rest-client</module>
         <module>microservices-eureka-service</module>
         <module>microservices-eureka-client</module>
