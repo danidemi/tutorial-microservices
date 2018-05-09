@@ -15,7 +15,7 @@
         <module>microservices-eureka-discovering-service</module>
         <module>microservices-saga-services</module>
         <module>microservices-zuul</module>
-        <module>microservices-spring-boot-db</module>
+        <module>ms-histryx</module>
     </modules>
     <packaging>pom</packaging>
 </project>
