@@ -1,0 +1,14 @@
+logging:
+  level:
+    root: WARN
+    org:
+      apache:
+        http:
+          # This shows the details of the HTTP traffic if REST template is set to use
+          # Apache client instead of Spring's default.
+          wire: DEBUG
+      springframework:
+        boot:
+          autoconfigure:
+            # This can be used to shows the autoconfiguration process.
+            logging: OFF

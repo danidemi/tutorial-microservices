@@ -1,19 +1,24 @@
-package com.danidemi.tutorial.microservices.springboot.restclient;
+package ms.rest.boot.server.resources;
 
 import java.util.Objects;
 import java.util.UUID;
 
-public class Item extends NewItem {
+public class Item {
 
     private UUID id;
-
-    public Item(NewItem newItem) {
-        super();
-        this.setDescription(newItem.getDescription());
-    }
+    private String description;
 
     public Item() {
         super();
+    }
+
+    public Item(String description) {
+        this.description = description;
+    }
+
+    public Item(UUID id, String description) {
+        this.id = id;
+        this.description = description;
     }
 
     public UUID getId() {
@@ -22,6 +27,14 @@ public class Item extends NewItem {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     @Override public boolean equals(Object o) {
@@ -37,13 +50,5 @@ public class Item extends NewItem {
 
     @Override public int hashCode() {
         return Objects.hash(super.hashCode(), id);
-    }
-
-    @Override public String toString() {
-        final StringBuffer sb = new StringBuffer("Item{");
-        sb.append("id=").append(id);
-        sb.append(", description=").append(getDescription());
-        sb.append('}');
-        return sb.toString();
     }
 }
