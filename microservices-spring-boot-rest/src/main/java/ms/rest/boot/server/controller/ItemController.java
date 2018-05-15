@@ -1,10 +1,6 @@
 package ms.rest.boot.server.controller;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +13,7 @@ public class ItemController {
     private final Map<UUID, Item> itemsById;
 
     public ItemController() {
-        this.itemsById = new HashMap<>();
+        this.itemsById = new LinkedHashMap<>();
 
         // pre populating some items
         postItem(new Item("item #1"));

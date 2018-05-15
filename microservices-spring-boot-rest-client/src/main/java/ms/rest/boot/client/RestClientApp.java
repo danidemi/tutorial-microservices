@@ -6,8 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Arrays;
+import java.util.List;
 
 @SpringBootApplication
 public class RestClientApp implements CommandLineRunner {
@@ -31,11 +36,22 @@ public class RestClientApp implements CommandLineRunner {
         RestTemplate restTemplate = new RestTemplate(new HttpComponentsClientHttpRequestFactory());
 
         // post with RestTemplate
-        HttpEntity<Item> request = new HttpEntity<>(new Item("bar"));
-        // double check that the URL used here is the one actually exposed by the server.
-        Item foo = restTemplate.postForObject("http://localhost:8080/items", request, Item.class);
-        System.out.println(foo);
-        
+        {
+            HttpEntity<Item> request = new HttpEntity<>(new Item("bar"));
+            // double check that the URL used here is the one actually exposed by the server.
+            Item foo = restTemplate.postForObject("http://localhost:8080/items", request, Item.class);
+            System.out.println(foo);
+        }
+
+        // get list
+        {
+            ResponseEntity<Item[]> response = restTemplate.exchange("http://localhost:8080/items", HttpMethod.GET, null, Item[].class);
+            List<Item> items = Arrays.asList(response.getBody());
+            for (int i = 0; i < items.size(); i++) {
+                System.out.println(String.format("Item %d: %s", i, items.get(i)));
+            }
+        }
+
 	}
 
 }
