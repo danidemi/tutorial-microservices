@@ -10,9 +10,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.danidemi.tutorial</groupId>
+    <artifactId>eureka-discoverable</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <artifactId>microservices-eureka-client</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -7,12 +7,12 @@
     <artifactId>tutorial-microservices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>microservices-spring-boot-rest</module>
+        <module>rest-server</module>
+        <module>rest-client</module>
+        <module>eureka-registry</module>
+        <module>eureka-discoverable</module>
+        <module>eureka-discovering</module>
         <module>microservices-spring-boot-db</module>
-        <module>microservices-spring-boot-rest-client</module>
-        <module>microservices-eureka-service</module>
-        <module>microservices-eureka-client</module>
-        <module>microservices-eureka-discovering-service</module>
         <module>microservices-saga-services</module>
         <module>microservices-zuul</module>
         <module>ms-histryx</module>
