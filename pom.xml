@@ -12,10 +12,10 @@
         <module>eureka-registry</module>
         <module>eureka-discoverable</module>
         <module>eureka-discovering</module>
-        <module>microservices-spring-boot-db</module>
-        <module>microservices-saga-services</module>
-        <module>microservices-zuul</module>
-        <module>ms-histryx</module>
+        <module>db-backed-service</module>
+        <module>saga-untransactional-services</module>
+        <module>zuul-service</module>
+        <module>hystrix</module>
     </modules>
     <packaging>pom</packaging>
 </project>
