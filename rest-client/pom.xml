@@ -9,15 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservices-spring-boot-rest-client</artifactId>
+    <artifactId>rest-client</artifactId>
 
     <dependencies>
-		
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--  
+        <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -27,9 +27,9 @@
 		<dependency>
 		  <groupId>org.apache.httpcomponents</groupId>
 		  <artifactId>httpclient</artifactId>
-		</dependency>		        
+		</dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -37,6 +37,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>    
+    </build>
 
 </project>
