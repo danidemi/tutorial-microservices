@@ -1,0 +1,17 @@
+server:
+  # Eureka's Web console will be available at this port.
+  port: 8761
+
+eureka:
+  client:
+    # Set whether the embedded Eureka client should subscribe to the Eureka registry.
+    register-with-eureka: false
+
+    # ???
+    fetch-registry: false
+
+logging:
+  level:
+    com.netflix: WARN
+    com.netflix.eureka: INFO
+    com.netflix.discovery: INFO

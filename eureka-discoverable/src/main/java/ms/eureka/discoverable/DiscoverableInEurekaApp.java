@@ -21,24 +21,11 @@ import java.util.List;
 @RestController
 public class DiscoverableInEurekaApp {
 
-    @Autowired
-    Environment env;
-
-    @RequestMapping("/")
-    public String home() {
-        return "Hello world";
-    }
-
     @GetMapping("/planets")
     public List<String> planets() {
         return Arrays.asList(
                 "Mercury", "Venus", "Earth", "Mars", "Ceres", "Jupiter", "Saturn", "Uranus", "Neptune"
         );
-    }
-
-    @PostConstruct
-    public void dumpConfig() {
-        System.out.println("************************" + env.getProperty("logging.pattern.console"));
     }
 
     public static void main(String[] args) {

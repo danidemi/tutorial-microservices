@@ -1,8 +1,8 @@
 package ms.eureka.discoveringservice;
 
+import ms.eureka.discoveringservice.controller.Utils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.cloud.client.ServiceInstance;
 

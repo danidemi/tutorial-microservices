@@ -7,6 +7,7 @@ public class Person {
     private Long id;
 
     public Person() {
+        // needed by the json / object mapping layer
     }
 
     public Person(String firstName, String lastName, Long id) {

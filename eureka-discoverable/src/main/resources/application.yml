@@ -1,5 +1,6 @@
 spring:
   application:
+    # By default Spring Cloud registers the service to Eureka with a slug containing the application name.
     name: planets-service
 
 logging:
@@ -19,7 +20,9 @@ server:
 eureka:
   client:
     serviceUrl:
+      # The URL to the Eureka's API.
       defaultZone: http://localhost:8761/eureka/
     healthcheck:
+      # ???
       enabled: true
 

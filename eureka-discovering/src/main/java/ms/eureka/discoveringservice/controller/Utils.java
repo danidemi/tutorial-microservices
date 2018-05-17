@@ -1,4 +1,4 @@
-package ms.eureka.discoveringservice;
+package ms.eureka.discoveringservice.controller;
 
 import org.springframework.cloud.client.ServiceInstance;
 
