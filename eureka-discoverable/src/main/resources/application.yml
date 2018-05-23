@@ -22,7 +22,11 @@ eureka:
     serviceUrl:
       # The URL to the Eureka's API.
       defaultZone: http://localhost:8761/eureka/
-    healthcheck:
-      # ???
-      enabled: true
-
+  instance:
+    prefer-ip-address: true
+    # This makes the service to be retrieved from Eureka as <homePageUrl>http://9.8.7.6:44444/</homePageUrl>
+    # To be used in contexts where the IP of the service is not the one that external client should use to reach it.
+    #ip-address: 9.8.7.6
+    # This makes the service to be retrieved from Eureka as <hostName>9.8.7.6</hostName>
+    # To be used in contexts where the IP of the service is not the one that external client should use to reach it.
+    #hostname: 9.8.7.6
