@@ -3,8 +3,9 @@
 
 # EMBEDDED SERVER CONFIGURATION
 
-# Server HTTP port.
-server.port=9090
-
-# Network address to which the server should bind. Leave blank to bind to all IPs
-server.address=
+# Embedded HTTP Server
+server:
+  # Port.
+  port: 9090
+  # Network address to which the server should bind. Leave blank to bind to all IPs
+  address:
