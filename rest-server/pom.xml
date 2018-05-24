@@ -24,11 +24,32 @@
     </dependencies>
 
     <build>
+
+        <finalName>${pom.artifactId}</finalName>
+
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--
+                    Makes fully executable applications for Unix systems.
+                    You can then run the application by typing './my-application.jar'
+                    instead of 'java -jar my-application.jar'.
+                    -->
+                    <executable>true</executable>
+                </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.2</version>
+            </plugin>
+
         </plugins>
+
+
     </build>
 </project>

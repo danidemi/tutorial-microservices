@@ -1,3 +1,8 @@
+# Build
+
+    mvn clean package
+    mvn dockerfile:build
+
 # Run
 
 From built jar:
@@ -13,6 +18,10 @@ From built jar, with remote debug enabled:
 From mvn, it seems it is not possible to pass parameters to the forked process:
 
     mvn spring-boot:run
+    
+# Deploy
+
+    mvn dockerfile:push
 
 	
 
