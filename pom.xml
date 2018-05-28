@@ -16,6 +16,7 @@
         <module>saga-untransactional-services</module>
         <module>zuul-service</module>
         <module>hystrix</module>
+        <module>db</module>
     </modules>
     <packaging>pom</packaging>
 </project>
